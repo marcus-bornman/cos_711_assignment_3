@@ -1,0 +1,14 @@
+\section{Background}
+This section will provide details on the problem domain and the algorithms that have been made use of. First, we describe the problem domain in terms of the challenge we are attempting to solve. Then, we provide some background on ResNet50V2 \cite{ResNet50V2} - the network employed for feature extraction in our convectional neural network. Finally, we elaborate on convolutional neural networks, as this is the kind of network we built.
+
+\subsection{Makerere Passion Fruit Disease Detection}\label{sec:domain}
+The findings presented in this report are relevant to the "Makerere Passion Fruit Disease Detection Challenge" \cite{zindi}. The challenge entails classifying the disease status of a plant, given an image of a passion fruit.
+
+The images were collected from the various areas in Uganda. Capturing images involved guidance from National Crop Resources Research Institute (NaCRRI) passion fruit disease experts. These experts identified the disease manifestation in the fruits of passion fruit plants.
+
+Roughly, the dataset contains 4000 images. All images have been resized to 512x512 pixels. Some images have more than a single fruit. Thus, some images have more than a single bounding box. Each bounding box is tagged to one of three classes: \emph{fruit\_healthy}, \emph{fruit\_brownspot} and \emph{fruit\_woodiness}.
+
+\subsection{ResNet50V2}
+Deep residual networks (ResNets) \cite{resnet} provide a learning framework for deep neural networks in particular. Simply, ResNets "reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning un-referenced functions". ResNets were shown to perform better than state-of-the-art methods of the time. Particularly in the context of networks with considerable depth and with challenging image recognition tasks.
+
+Building on the idea of ResNets, ResNet50V2 \cite{ResNet50V2} was introduced. ResNet50V2 adds a new "residual unit". Results show that ResNet50V2 improved on the performance of ResNet50, both in terms of the ease of training and ability to generalize. In the context of this report, ResNet50 is used for feature extraction in both the identification of bounding boxes and classification of fruits.
